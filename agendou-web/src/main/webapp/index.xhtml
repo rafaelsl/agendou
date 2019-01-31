@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:scriptfree="http://jakarta.apache.org/taglibs/standard/scriptfree"
+	xmlns:permittedTaglibs="http://jakarta.apache.org/taglibs/standard/permittedTaglibs"
+	xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+	xmlns:sql="http://xmlns.jcp.org/jsp/jstl/sql"
+	xmlns:fmt="http://xmlns.jcp.org/jsp/jstl/fmt"
+	xmlns:fn="http://xmlns.jcp.org/jsp/jstl/functions"
+	xmlns:x="http://xmlns.jcp.org/jsp/jstl/xml"
+	xmlns:sql_rt="http://xmlns.jcp.org/jstl/sql_rt"
+	xmlns:fmt_rt="http://xmlns.jcp.org/jstl/fmt_rt"
+	xmlns:c_rt="http://xmlns.jcp.org/jstl/core_rt"
+	xmlns:x_rt="http://xmlns.jcp.org/jstl/xml_rt"
+	xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="/pages/template/template.xhtml">
+	<ui:define name="head">
+		<title><h:outputText value="#{text['main.title']}" /></title>
+	</ui:define>
+	<ui:define name="body">
+		<header>
+			<!-- Fixed navbar -->
+			<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+				<a class="navbar-brand" href="#">Agendou</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarCollapse">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item active"><a class="nav-link" href="#">Home<span class="sr-only">(current)</span>	</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">Caracteristicas</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">Sobre</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">Contato</a>
+						</li>
+					</ul>
+					<h:commandLink value="#{text['main.button.login.text']}" styleClass="btn btn-sm btn-outline-success" >
+						<f:passThroughAttribute name="data-toggle" value="modal" />
+						<f:passThroughAttribute name="data-target" value="#exampleModalCenter" />
+					</h:commandLink>
+					<h:commandLink value="#{text['main.button.register.text']}" styleClass="btn btn-sm btn-outline-success" />
+				</div>
+			</nav>
+		</header>
+		<main role="main" class="container">
+			<h1 class="mt-5">Agendou</h1>
+		</main>
+
+		<footer class="footer">
+			<div class="container">
+				<span class="text-muted"><h:outputText value="#{text['main.title']}" /></span>
+			</div>
+		</footer>
+		<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+		  <div class="modal-dialog modal-dialog-centered" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <h5 class="modal-title" id="exampleModalCenterTitle"><h:outputText value="#{text['user.login.title.text']}" /></h5>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true"></span>
+		        </button>
+		      </div>
+		      <div class="modal-body">
+		      	<h:form>
+				  <div class="form-group">
+				    <label for="exampleInputEmail1"><h:outputText value="#{text['user.login.label.text.email']}" /></label>
+				    <h:inputText styleClass="form-control" >
+				    	<f:passThroughAttribute name="placeholder" value="#{text['user.login.placeholder.text.email.placeholder']}" />
+				    </h:inputText> 
+				    <small id="emailHelp" class="form-text text-muted"><h:outputText value="#{text['user.login.warning.text']}" /></small>
+				  </div>
+				  <div class="form-group">
+				    <label for="exampleInputPassword1"><h:outputText value="#{text['user.login.label.text.password']}" /></label>
+				     <h:inputSecret id="exampleInputPassword1" styleClass="form-control" >
+				    	<f:passThroughAttribute name="placeholder" value="#{text['user.login.placeholder.text.password.placeholder']}" />
+				    </h:inputSecret> 
+				  </div>
+				  <div class="form-group form-check">
+				  	<h:selectBooleanCheckbox value="" styleClass="form-check-input"/><h:outputText value="#{text['user.login.remenberme.text']}" />
+				  </div>
+				  <h:commandButton value="#{text['user.login.button.submit.text']}" styleClass="btn btn-primary"></h:commandButton>
+				</h:form>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+	</ui:define>
+</ui:composition>
+</html>

@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:scriptfree="http://jakarta.apache.org/taglibs/standard/scriptfree"
+	xmlns:permittedTaglibs="http://jakarta.apache.org/taglibs/standard/permittedTaglibs"
+	xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+	xmlns:sql="http://xmlns.jcp.org/jsp/jstl/sql"
+	xmlns:fmt="http://xmlns.jcp.org/jsp/jstl/fmt"
+	xmlns:fn="http://xmlns.jcp.org/jsp/jstl/functions"
+	xmlns:x="http://xmlns.jcp.org/jsp/jstl/xml"
+	xmlns:sql_rt="http://xmlns.jcp.org/jstl/sql_rt"
+	xmlns:fmt_rt="http://xmlns.jcp.org/jstl/fmt_rt"
+	xmlns:c_rt="http://xmlns.jcp.org/jstl/core_rt"
+	xmlns:x_rt="http://xmlns.jcp.org/jstl/xml_rt"
+	xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<meta name="description" content="Template Agendou Software" />
+	<meta name="author" content="Rafael Rodrigo Jardim Silva" />
+
+	<!-- Bootstrap core CSS -->
+	<h:outputStylesheet library="lib" name="bootstrap4/css/bootstrap.min.css" />
+	<h:outputStylesheet library="lib" name="fontawesome/css/all.css" />
+	<h:outputStylesheet library="lib" name="calendario/css/calendario.css" />
+	<h:outputStylesheet library="css" name="style.css" />
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<f:verbatim>
+		<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	</f:verbatim>
+	<ui:insert name="head" />
+</h:head>
+<h:body>
+	<ui:insert name="body" />
+	<h:outputScript library="lib" name="jquery/jquery-3.3.1.min.js" />
+	<h:outputScript library="lib" name="bootstrap4/js/bootstrap.bundle.min.js" />
+	<h:outputScript library="lib" name="popper/popper.js" />
+	<h:outputScript library="lib" name="fontawesome/js/all.js" />
+	<h:outputScript library="lib" name="calendario/js/calendario.js"/>
+	<h:outputScript library="js" name="agendou.js" />
+	
+</h:body>
+</html>
